@@ -23,10 +23,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { LoginComponent } from './components/login/login.component';
+import { NavComponent } from './components/nav/nav.component';
+import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    NavComponent,
+    UsuarioListComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +66,7 @@ import { MatCardModule } from '@angular/material/card';
       progressBar: true
     }),
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
