@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: NavComponent },
   {
     path: 'usuarios', component: UsuarioListComponent, canActivate: [AuthGuard], children: [
-
+      
     ]
   },
 ];

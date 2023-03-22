@@ -28,13 +28,15 @@ import { NavComponent } from './components/nav/nav.component';
 import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
+import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavComponent,
-    UsuarioListComponent
+    UsuarioListComponent,
+    UsuarioCreateComponent
   ],
   imports: [
     BrowserModule,
