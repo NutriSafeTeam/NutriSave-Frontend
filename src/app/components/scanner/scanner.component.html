@@ -1,0 +1,17 @@
+
+<div *ngIf="barcode">
+  <h1>
+      {{ barcode }}
+  </h1>
+</div>
+
+<button mat-stroked-button color="primary"  (click)="startScanner()">
+  escanear
+</button>
+
+<div class="input-group">
+ 
+  <div id="inputBarcode" style="position: static">
+      <div id="interactive" class="viewport"></div>
+  </div>
+</div>
