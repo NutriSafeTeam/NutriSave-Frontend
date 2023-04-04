@@ -1,11 +1,9 @@
-
 <div *ngIf="barcode">
-  <h1>
+  <div>
       {{ barcode }}
-  </h1>
+  </div>
 </div>
-
-<button mat-stroked-button color="primary"  (click)="startScanner()">
+<button mat-stroked-button color="primary" (click)="startScanner()" access origin="*" subdomains="true" >
   escanear
 </button>
 
