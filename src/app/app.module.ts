@@ -29,6 +29,7 @@ import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
+import { ScannerComponent } from './components/scanner/scanner.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { UsuarioCreateComponent } from './components/usuario/usuario-create/usua
     LoginComponent,
     NavComponent,
     UsuarioListComponent,
-    UsuarioCreateComponent
+    UsuarioCreateComponent,
+    ScannerComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +69,7 @@ import { UsuarioCreateComponent } from './components/usuario/usuario-create/usua
       closeButton: true,
       progressBar: true
     }),
+    
   ],
   providers: [AuthInterceptorProvider, AuthGuard],
   bootstrap: [AppComponent]
