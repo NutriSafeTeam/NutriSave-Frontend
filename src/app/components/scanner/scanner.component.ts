@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import Quagga from 'quagga';
 
 @Component({
@@ -19,10 +20,10 @@ export class ScannerComponent implements OnInit {
       constraints: {
         width: { min: 640 },
         height: { min: 480 },
-        aspectRatio: { min: 1, max: 2 }, // sane aspect ratios?
-        facingMode: 'environment', // or user
+        aspectRatio: { min: 1, max: 2 },
+        facingMode: 'environment', 
       },
-      singleChannel: false // true: only the red color-channel is read
+      singleChannel: false 
     },
     locator: {
       patchSize: 'medium',
@@ -44,7 +45,8 @@ export class ScannerComponent implements OnInit {
       ]
     }
   };
-  constructor(private ref: ChangeDetectorRef) { }
+  constructor(private ref: ChangeDetectorRef,
+              private router: Router) { }
 
   ngOnInit() {
     console.log('Barcode: initialization');
@@ -116,6 +118,7 @@ export class ScannerComponent implements OnInit {
       console.log("JSON.stringify(result)",JSON.stringify(result))
       // console.log("this.barcodeResult",this.barcodeResult.json())
       Quagga.stop();
+      this.router.navigate(['produto/' + code ]);
     }
 
   }

@@ -30,6 +30,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
+import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado/produto-scaneado.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ScannerComponent } from './components/scanner/scanner.component';
     NavComponent,
     UsuarioListComponent,
     UsuarioCreateComponent,
-    ScannerComponent
+    ScannerComponent,
+    ProdutoScaneadoComponent
   ],
   imports: [
     BrowserModule,

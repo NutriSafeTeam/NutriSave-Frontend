@@ -1,6 +1,6 @@
-export const API_CONFIG = {
+export const API_COSMO = {
 
-    baseUrl: 'https://api.cosmos.bluesoft.com.br/',
+    baseUrl: 'https://api.cosmos.bluesoft.com.br',
     token: 'zpESixdl3IkXHAZGQSwj4w'
-    
+
 }
