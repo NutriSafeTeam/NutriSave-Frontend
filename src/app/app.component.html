@@ -299,42 +299,31 @@
     }
 </style>
 
-<!-- Menu -->
-<mat-toolbar>
-    <div class="toolbar" role="banner">
-        <img width="33" alt="NutriSafe Logo" src="https://i.imgur.com/FohIXdz.png" />
-        <span>NutriSafe</span>
-        <div class="spacer"></div>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-                <mat-icon>settings_overscan</mat-icon>
-                <span>Escanear</span>
+<header>
+    <!-- Menu -->
+    <mat-toolbar>
+        <div class="toolbar" role="banner">
+            <img width="33" alt="NutriSafe Logo" src="https://i.imgur.com/FohIXdz.png" />
+            <span>NutriSafe</span>
+            <div class="spacer"></div>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+                <mat-icon>menu</mat-icon>
             </button>
-            <button mat-menu-item>
-                <mat-icon>favorite_border</mat-icon>
-                <span>Favoritos</span>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>settings_overscan</mat-icon>
+                    <span>Escanear</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>favorite_border</mat-icon>
+                    <span>Favoritos</span>
+                </button>
+            </mat-menu>
+            <button mat-icon-button class="example-icon" aria-label="Configurações">
+                <mat-icon>settings</mat-icon>
             </button>
-        </mat-menu>
-        <button mat-icon-button class="example-icon" aria-label="Configurações">
-            <mat-icon>settings</mat-icon>
-          </button>
-    </div>
-</mat-toolbar>
+        </div>
+    </mat-toolbar>
+</header>
 
-
-<!-- Conteúdo -->
-<div class="content" role="main">
-
-    <!-- Inicio -->
-    <h2>Página em construção</h2>
-    <p>Novidades em breve...</p>
-
-    <div class="card-container">
-        <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">
-            <span>Fazendo um botão</span>
-        </a>
-    </div>
-</div>
+<section> <app-home> </app-home> </section>
