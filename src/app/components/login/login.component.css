@@ -1,8 +1,15 @@
 .container {
     height: 100%;
-    background: var(--backGround-collor);
+    background: #812FB8;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    padding: 4rem 1rem;
+    background: #812FB8;
+    display: flex;
     justify-content: center;
 }
 
@@ -10,12 +17,13 @@
     width: 30rem;
     margin: auto;
     padding: 4rem 1rem;
-    background-color: rgb(235, 235 ,235);
+    background-color: rgb(235, 235, 235);
     border-radius: 1rem;
 
 }
 
 h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     text-align: center;
 }
@@ -27,3 +35,6 @@ h1 {
 button {
     margin-top: 1.5rem;
 }
+.example-spacer {
+    flex: 1 1 auto;
+  }

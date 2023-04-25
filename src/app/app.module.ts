@@ -23,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
@@ -30,6 +31,10 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
+import { HomeComponent } from './components/home/home.component';
+import { BuscaComponent } from './components/busca/busca.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +43,10 @@ import { ScannerComponent } from './components/scanner/scanner.component';
     NavComponent,
     UsuarioListComponent,
     UsuarioCreateComponent,
-    ScannerComponent
+    ScannerComponent,
+    HomeComponent,
+    BuscaComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +72,7 @@ import { ScannerComponent } from './components/scanner/scanner.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatMenuModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
