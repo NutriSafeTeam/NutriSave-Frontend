@@ -1,0 +1,10 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.menu {
+    background-color: #812FB8;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
