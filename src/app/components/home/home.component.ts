@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.navigate(['home']);
-
   }
   handleSize(event) {
     this.mybreakpoint = (event.target.innerWidth <= 600) ? 1 : 1;
