@@ -1,1 +1,38 @@
-<p>busca works!</p>
+<div>
+    <mat-form-field>
+        <mat-label>Pesquisar</mat-label>
+        <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
+    </mat-form-field>
+
+    <button (click)="findByName()" color="primary">Pesquisar</button>
+
+    <div class="mat-elevation-z8">
+        <h1>
+            Nome: {{produtoFinal.name}}
+        </h1>
+        <h1>
+            Calorias: {{produtoFinal.calories}}
+        </h1>
+        <h1>
+            Proteinas: {{produtoFinal.protein_g}}
+        </h1>
+        <h1>
+            Sódio: {{produtoFinal.sodium_mg}}
+        </h1>
+        <h1>
+            Potássio: {{produtoFinal.potassium_mg}}
+        </h1>
+        <h1>
+            Colesterol: {{produtoFinal.cholesterol_mg}}
+        </h1>
+        <h1>
+            Carboidratos: {{produtoFinal.carbohydrates_total_g}}
+        </h1>
+        <h1>
+            Fibras: {{produtoFinal.fiber_g}}
+        </h1>
+        <h1>
+            Açúcar: {{produtoFinal.sugar_g}}
+        </h1>
+    </div>
+</div>

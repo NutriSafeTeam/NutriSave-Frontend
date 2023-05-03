@@ -35,6 +35,7 @@ import { ScannerComponent } from './components/scanner/scanner.component';
 import { HomeComponent } from './components/home/home.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado/produto-scaneado.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     ScannerComponent,
     HomeComponent,
     BuscaComponent,
-    PerfilComponent
+    PerfilComponent,
+    ProdutoScaneadoComponent
   ],
   imports: [
     BrowserModule,
