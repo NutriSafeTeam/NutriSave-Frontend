@@ -4,10 +4,12 @@ import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { NavComponent } from './components/nav/nav.component';
+import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado/produto-scaneado.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
 import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { BuscaComponent } from './components/busca/busca.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
       { path: 'cadastro',          component: CadastroComponent }, 
       { path: 'scanner',    component: ScannerComponent },
       { path: 'perfil',    component: PerfilComponent },
+      { path: 'produto/:id', component: ProdutoScaneadoComponent},
+      { path: 'busca',                 component: BuscaComponent},
     ] 
   },
   {
