@@ -50,7 +50,7 @@ import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado
     HomeComponent,
     BuscaComponent,
     PerfilComponent,
-    CadastroComponent
+    CadastroComponent,
     ProdutoScaneadoComponent
   ],
   imports: [
