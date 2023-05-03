@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ToastrService } from 'ngx-toastr';
 import { ProdutoFinal } from 'src/app/models/produtoFinal';
 import { RequisicaoService } from 'src/app/services/requisicao.service';
 
@@ -23,7 +24,10 @@ export class BuscaComponent {
     sugar_g:               '',
   }
 
-  constructor( private service: RequisicaoService ) {
+  constructor( 
+    private service: RequisicaoService,
+    private toast: ToastrService
+    ) {
 
   }
 
@@ -31,11 +35,12 @@ export class BuscaComponent {
   }
 
   findByName(): void {
-    console.log("cheguei aqui");
-    this.service.findByName(this.produtoFinal.name).subscribe( resposta => {
-      console.log("cheguei aqui");
-      this.produtoFinal = resposta;
-      console.log(resposta.calories);
+    this.service.findByName(this.produtoFinal.name).subscribe( {
+      next: (resposta) => {
+      this.produtoFinal = resposta[0];
+    },error: (error) => {
+      this.toast.error('Produto não encontrado')
+      },
     });
   }
 
