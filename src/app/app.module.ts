@@ -35,6 +35,7 @@ import { ScannerComponent } from './components/scanner/scanner.component';
 import { HomeComponent } from './components/home/home.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado/produto-scaneado.component';
 
 
@@ -49,6 +50,7 @@ import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado
     HomeComponent,
     BuscaComponent,
     PerfilComponent,
+    CadastroComponent
     ProdutoScaneadoComponent
   ],
   imports: [

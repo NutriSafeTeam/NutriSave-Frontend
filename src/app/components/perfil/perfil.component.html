@@ -1,1 +1,24 @@
-<p>perfil works!</p>
+
+<br>
+<br>
+<br>
+<mat-grid-list [cols]=1 rowHeight="3:1" (window:resize)="handleSize($event)">
+    <mat-grid-tile>
+        <section>
+        <div align="center" class="example-label">
+        <img mat-card-image src="https://i.pinimg.com/originals/97/2d/4d/972d4d1e53f0322522c994dccd1a8a02.jpg" class="user">
+            <h2>Gato</h2>
+            <button mat-raised-button color="accent" class="maxwidth" routerLink="scanner" >Editar perfil</button>
+            <button mat-raised-button color="accent" class="maxwidth" routerLink="scanner" >Termos e privacidade</button>
+            <button mat-raised-button color="accent" class="maxwidth" routerLink="scanner" >Log out</button>
+            <a class="card-button" target="_blank" rel="noopener">
+                <span>Possui diabetes.</span>
+            </a>
+        </div>
+        </section>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<br>
+<br>
+
