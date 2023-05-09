@@ -36,6 +36,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado/produto-scaneado.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     HomeComponent,
     BuscaComponent,
     PerfilComponent,
-    CadastroComponent
+    CadastroComponent,
+    ProdutoScaneadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+
 .container {
     height: 100%;
     background: #812FB8;
@@ -7,25 +8,25 @@
 }
 
 .logo {
-    padding: 4rem 1rem;
-    background: #812FB8;
     display: flex;
     justify-content: center;
+    
 }
 
 .form {
     width: 30rem;
-    margin: auto;
     padding: 4rem 1rem;
     background-color: rgb(235, 235, 235);
     border-radius: 1rem;
+    margin: auto;
 
 }
 
 h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     text-align: center;
+    font-size: large;
 }
 
 .full-width {
@@ -34,6 +35,9 @@ h1 {
 
 button {
     margin-top: 1.5rem;
+    border-radius: 10px;
+    background-color: #74976E;
+    font-style: normal;
 }
 .example-spacer {
     flex: 1 1 auto;
