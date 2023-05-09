@@ -23,7 +23,7 @@ mat-button {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
-  }
+}
 
 .card {
     all: unset;
@@ -96,9 +96,22 @@ mat-button {
 
 .example-card {
     max-width: 400px;
-  }
-  
-  mat-card-image {
+}
+
+mat-card-image {
     width: 50%;
     height: 50%
-  }
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 600px 200px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: 0 auto;
+        max-width: 768px;
+    }
+}
