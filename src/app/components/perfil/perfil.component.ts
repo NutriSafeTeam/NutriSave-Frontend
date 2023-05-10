@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  mybreakpoint: number;
   constructor(
     private router: Router) {
   }
@@ -19,7 +18,7 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  handleSize(event) {
-    this.mybreakpoint = (event.target.innerWidth <= 600) ? 1 : 1;
-  }
+
+ 
+
 }
