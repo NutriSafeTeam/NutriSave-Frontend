@@ -1,32 +1,24 @@
-<br>
-<br>
-<mat-grid-list [cols]=2 rowHeight="2:1" (window:resize)="handleSize($event)">
+<mat-grid-list [cols]="breakpoint" rowHeight="1.2:1" (window:resize)="onResize($event)">
     <mat-grid-tile>
         <div class="card">
             <section>
                 <div class="example-label">
                     <h2>Conheça o projeto</h2>
                 </div>
-                <div class="example-label">
                     <p>NutriSafe, com o lema "comer com confiança é para todos", tem o intuito deNutriSafe, com o lema
                         "comer com confiança é para todos", é um aplicativo que visa
                         retornar ao usuário os ingredientes presentes em determinado produto, seja pelo scanner do
                         código de barras ou pelo número digitado, e comparar com os ingredientes restritos informados
                         pelo usuário</p>
-                </div>
                 <div class="example-button-row">
-                    <button mat-raised-button color="accent" routerLink="scanner" >Escaneie um produto</button>
+                    <button mat-raised-button color="accent" routerLink="scanner">Escaneie um produto</button>
                 </div>
             </section>
         </div>
     </mat-grid-tile>
     <mat-grid-tile><img mat-card-image src="https://i.imgur.com/FDuI9jD.png"></mat-grid-tile>
 </mat-grid-list>
-
-<br>
-<br>
-
-<div align="center">
+<div class align="center">
     <h2>Objetivos</h2>
 </div>
 
@@ -43,7 +35,3 @@
         </a>
     </div>
 </section>
-
-<br>
-<br>
-

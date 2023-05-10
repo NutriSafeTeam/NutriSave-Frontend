@@ -7,14 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  mybreakpoint: number;
+  breakpoint: number;
   constructor(
     private router: Router) {
   }
 
   ngOnInit(): void {
+
+    this.breakpoint = (window.innerWidth <= 700) ? 1 : 2;
+
   }
-  handleSize(event) {
-    this.mybreakpoint = (event.target.innerWidth <= 600) ? 1 : 1;
+
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 700) ? 1 : 2;
   }
+
 }
