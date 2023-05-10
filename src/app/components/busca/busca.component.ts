@@ -4,11 +4,12 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ToastrService } from 'ngx-toastr';
 import { ProdutoFinal } from 'src/app/models/produtoFinal';
 import { RequisicaoService } from 'src/app/services/requisicao.service';
+import { MatIconModule } from "@angular/material/icon";
 
 @Component({
   selector: 'app-busca',
   templateUrl: './busca.component.html',
-  styleUrls: ['./busca.component.css']
+  styleUrls: ['./busca.component.css'],
 })
 export class BuscaComponent {
 
