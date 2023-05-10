@@ -12,6 +12,11 @@ export class PerfilComponent implements OnInit {
     private router: Router) {
   }
 
+  logOut(): void{
+    localStorage.clear();
+    this.router.navigate(['login']);
+  }
+
   ngOnInit(): void {
   }
   handleSize(event) {
