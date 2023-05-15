@@ -6,3 +6,15 @@ mat-form-field{
     margin-top: 1.5rem;
     margin-left: 1.5rem;
 }
+
+.pesqusiar {
+    width: 100%;
+}
+
+.card {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    border-radius: 10px;
+}
