@@ -4,35 +4,37 @@
         <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
     </mat-form-field>
 
-    <button (click)="findByName()" color="primary">Pesquisar</button>
+    <button mat-icon-button color="primary" (click)="findByName()"> <mat-icon>search</mat-icon> </button>
 
     <div class="mat-elevation-z8">
+        <br>
         <div>
-            Nome: {{produtoFinal.name}}
+            <h4>Nome: {{produtoFinal.name}}</h4>
         </div>
         <div>
-            Calorias: {{produtoFinal.calories}}
+            <h4>Calorias: {{produtoFinal.calories}}</h4>
         </div>
         <div>
-            Proteinas: {{produtoFinal.protein_g}}
+            <h4>Proteinas: {{produtoFinal.protein_g}}</h4>
         </div>
         <div>
-            Sódio_c: {{produtoFinal.sodium_mg}}
+            <h4>Sódio: {{produtoFinal.sodium_mg}}</h4>
         </div>
         <div>
-            Potássio: {{produtoFinal.potassium_mg}}
+            <h4>Potássio: {{produtoFinal.potassium_mg}}</h4>
         </div>
         <div>
-            Colesterol: {{produtoFinal.cholesterol_mg}}
+            <h4>Colesterol: {{produtoFinal.cholesterol_mg}}</h4>
         </div>
         <div>
-            Carboidratos: {{produtoFinal.carbohydrates_total_g}}
+            <h4>Carboidratos: {{produtoFinal.carbohydrates_total_g}}</h4>
         </div>
         <div>
-            Fibras: {{produtoFinal.fiber_g}}
+            <h4>Fibras: {{produtoFinal.fiber_g}}</h4>
         </div>
         <div>
-            Açúcar: {{produtoFinal.sugar_g}}
+            <h4>Açúcar: {{produtoFinal.sugar_g}}</h4>
         </div>
+        <br>
     </div>
 </div>
