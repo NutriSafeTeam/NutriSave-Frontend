@@ -1,10 +1,12 @@
-<div>
-    <mat-form-field>
-        <mat-label>Pesquisar</mat-label>
-        <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
-    </mat-form-field>
-
-    <button mat-icon-button color="primary" (click)="findByName()"> <mat-icon>search</mat-icon> </button>
+<div class="card">
+    <div class="Pesquisar">
+        <mat-form-field>
+            <mat-label>Pesquisar</mat-label>
+            <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
+        </mat-form-field>
+    
+        <button mat-icon-button color="primary" (click)="findByName()"> <mat-icon>search</mat-icon> </button>
+    </div>
 
     <div class="mat-elevation-z8">
         <br>
