@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import Quagga from 'quagga';
 
@@ -10,19 +10,22 @@ import Quagga from 'quagga';
 
 export class ScannerComponent implements OnInit {
 
+  innerWidth: any = window.innerWidth;
+  innerHeigth: any = window.innerHeight;
+
   barcode = '';
   barcodeResult;
   configQuagga = {
     inputStream: {
       name: 'Live',
       type: 'LiveStream',
-      target: '#inputBarcode',
-      constraints: {
-        width: { min: 640 },
-        height: { min: 480 },
-        aspectRatio: { min: 1, max: 2 },
-        facingMode: 'environment', 
-      },
+        target: '#inputBarcode',
+        constraints: {
+          width: { min:  640},
+          height: { min: 480},
+          aspectRatio: { min: 1, max: 2 },
+          facingMode: 'environment', 
+        },
       singleChannel: false 
     },
     locator: {
@@ -48,8 +51,17 @@ export class ScannerComponent implements OnInit {
   constructor(private ref: ChangeDetectorRef,
               private router: Router) { }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    this.innerHeigth = window.innerHeight;
+  }
+
   ngOnInit() {
-    console.log('Barcode: initialization');
+    this.innerWidth = window.innerWidth;
+    this.innerHeigth = window.innerHeight;
+    console.log(this.innerWidth + "\n" + this.innerHeigth);
+    this.startScanner();
   }
 
   testChangeValues() {
