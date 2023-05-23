@@ -8,6 +8,14 @@
         <button mat-icon-button color="primary" (click)="findByName()"> <mat-icon>search</mat-icon> </button>
     </div>
 
+    <button mat-icon-button color="primary" (click)="startScanner()"> escanear </button>
+
+    <div class="input-group">
+        <div id="inputBarcode" style="position: static">
+            <div id="interactive" class="viewport"></div>
+        </div>
+    </div>
+
     <div class="mat-elevation-z8">
         <br>
         <div>
