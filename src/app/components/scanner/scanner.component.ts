@@ -49,7 +49,7 @@ export class ScannerComponent implements OnInit {
     }
   };
   constructor(private ref: ChangeDetectorRef,
-              private router: Router) { }
+              private router: Router  ) { }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
