@@ -1,15 +1,15 @@
-<mat-grid-list [cols]="breakpoint" rowHeight="1.2:1" (window:resize)="onResize($event)">
+<mat-grid-list [cols]="breakpoint1" rowHeight="1:0.8" (window:resize)="onResize($event)">
     <mat-grid-tile>
         <div class="card">
             <section>
                 <div class="example-label">
                     <h2>Conheça o projeto</h2>
                 </div>
-                    <p>NutriSafe, com o lema "comer com confiança é para todos", tem o intuito deNutriSafe, com o lema
-                        "comer com confiança é para todos", é um aplicativo que visa
-                        retornar ao usuário os ingredientes presentes em determinado produto, seja pelo scanner do
-                        código de barras ou pelo número digitado, e comparar com os ingredientes restritos informados
-                        pelo usuário</p>
+                <p>NutriSafe, com o lema "comer com confiança é para todos", tem o intuito deNutriSafe, com o lema
+                    "comer com confiança é para todos", é um aplicativo que visa
+                    retornar ao usuário os ingredientes presentes em determinado produto, seja pelo scanner do
+                    código de barras ou pelo número digitado, e comparar com os ingredientes restritos informados
+                    pelo usuário</p>
                 <div class="example-button-row">
                     <button mat-raised-button color="accent" routerLink="scanner">Escaneie um produto</button>
                 </div>
@@ -18,9 +18,11 @@
     </mat-grid-tile>
     <mat-grid-tile><img mat-card-image src="https://i.imgur.com/FDuI9jD.png"></mat-grid-tile>
 </mat-grid-list>
+
 <div class align="center">
     <h2>Objetivos</h2>
 </div>
+<br>
 
 <section>
     <div class="card-container">
@@ -35,3 +37,37 @@
         </a>
     </div>
 </section>
+
+<br><br>
+<div class align="center">
+    <h2>Nossa equipe</h2>
+</div>
+
+<mat-grid-list [cols]="breakpoint2" rowHeight="1:1" (window:resize)="onResize($event)">
+    <mat-grid-tile>
+        <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <mat-card-actions>
+                <button mat-button align = "center">Ana Carla</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <mat-card-actions>
+                <button mat-button>Ana Carla</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card class="example-card">
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <mat-card-actions>
+                <button mat-button>Ana Carla</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+    
+</mat-grid-list>
