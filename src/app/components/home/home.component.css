@@ -98,20 +98,58 @@ mat-button {
     max-width: 400px;
 }
 
-mat-card-image {
-    width: 50%;
-    height: 50%
+h2 {
+    text-align: center;
+    font-style: normal;
 }
 
-.container{
+h3 {
+    text-align: center;
+    font-style: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1 {
+    border-radius: 50%;
+    transition: all 0.2s;
+    width: 60%;
+}
+
+.wrapper {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 600px 200px;
+    flex: 1 1 auto;
+    border-left: 500px;
+
+}
+
+.wrapper>div {
+    margin-bottom: 50px;
+    /* Espaçamento inferior entre as divs */
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @media (min-width: 768px) {
-    .container {
-        margin: 0 auto;
-        max-width: 768px;
+    .wrapper {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: 1fr;
     }
 }

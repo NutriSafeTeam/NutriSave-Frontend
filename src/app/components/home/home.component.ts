@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   breakpoint1: number;
-  breakpoint2: number
   constructor(
     private router: Router) {
   }
@@ -16,13 +15,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.breakpoint1 = (window.innerWidth <= 700) ? 1 :2;
-    this.breakpoint2 = (window.innerWidth <= 700) ? 1 :3;
 
   }
 
   onResize(event) {
-    this.breakpoint1 = (window.innerWidth <= 700) ? 1 :2;
-    this.breakpoint2 = (event.target.innerWidth <= 700) ? 1 : 3;
+    this.breakpoint1 = (window.innerWidth <= 700) ? 1 : 2;
   }
 
 }
