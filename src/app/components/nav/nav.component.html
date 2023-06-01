@@ -1,1 +1,42 @@
-<p>nav works!</p>
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button mat-icon-button class="example-icon">
+            <img alt="NutriSafe Logo" src="https://i.imgur.com/FohIXdz.png" />
+        </button>
+        <span>NutriSafe</span>
+        <span class="spacer"></span>
+        <button mat-button (click)="opened =! opened">
+            <mat-icon>menu</mat-icon></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+        <mat-nav-list>
+            <mat-list-item routerLink="home">
+                <mat-icon>home</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item routerLink="busca">
+                <mat-icon>search</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item routerLink="scanner">
+                <mat-icon>settings_overscan</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon>favorite</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item routerLink="perfil">
+                <mat-icon>settings</mat-icon>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

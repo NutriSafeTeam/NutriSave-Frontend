@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="Pesquisar">
+        <mat-form-field>
+            <mat-label>Pesquisar</mat-label>
+            <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
+        </mat-form-field>
+    
+        <button mat-icon-button color="primary" (click)="findByName()"> <mat-icon>search</mat-icon> </button>
+    </div>
+
+    <button mat-icon-button color="primary" (click)="startScanner()"> escanear </button>
+
+    <div class="input-group">
+        <div id="inputBarcode" style="position: static">
+            <div id="interactive" class="viewport"></div>
+        </div>
+    </div>
+
+    <div class="mat-elevation-z8">
+        <br>
+        <div>
+            <h4>Nome: {{produtoFinal.name}}</h4>
+        </div>
+        <div>
+            <h4>Calorias: {{produtoFinal.calories}}</h4>
+        </div>
+        <div>
+            <h4>Proteinas: {{produtoFinal.protein_g}}</h4>
+        </div>
+        <div>
+            <h4>Sódio: {{produtoFinal.sodium_mg}}</h4>
+        </div>
+        <div>
+            <h4>Potássio: {{produtoFinal.potassium_mg}}</h4>
+        </div>
+        <div>
+            <h4>Colesterol: {{produtoFinal.cholesterol_mg}}</h4>
+        </div>
+        <div>
+            <h4>Carboidratos: {{produtoFinal.carbohydrates_total_g}}</h4>
+        </div>
+        <div>
+            <h4>Fibras: {{produtoFinal.fiber_g}}</h4>
+        </div>
+        <div>
+            <h4>Açúcar: {{produtoFinal.sugar_g}}</h4>
+        </div>
+        <br>
+    </div>
+</div>

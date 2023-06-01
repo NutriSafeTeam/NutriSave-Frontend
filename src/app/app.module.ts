@@ -24,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UsuarioListComponent } from './components/usuario/usuario-list/usuario-list.component';
@@ -32,6 +33,11 @@ import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BuscaComponent } from './components/busca/busca.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { ProdutoScaneadoComponent } from './components/produtos/produto-scaneado/produto-scaneado.component';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +48,10 @@ import { HomeComponent } from './pages/home/home.component';
     UsuarioCreateComponent,
     ScannerComponent,
     HomeComponent,
+    BuscaComponent,
+    PerfilComponent,
+    CadastroComponent,
+    ProdutoScaneadoComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +78,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatListModule,
     MatCardModule,
     MatMenuModule,
+    MatGridListModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,

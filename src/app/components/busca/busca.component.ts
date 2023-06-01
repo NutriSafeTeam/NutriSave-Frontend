@@ -1,14 +1,61 @@
-import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { ToastrService } from 'ngx-toastr';
+import { ProdutoFinal } from 'src/app/models/produtoFinal';
+import { RequisicaoService } from 'src/app/services/requisicao.service';
+import { MatIconModule } from "@angular/material/icon";
 import Quagga from 'quagga';
+import { Produto } from 'src/app/models/produto';
+
 
 @Component({
-  selector: 'app-scanner',
-  templateUrl: './scanner.component.html',
-  styleUrls: ['./scanner.component.css']
+  selector: 'app-busca',
+  templateUrl: './busca.component.html',
+  styleUrls: ['./busca.component.css'],
 })
+export class BuscaComponent {
 
-export class ScannerComponent implements OnInit {
+  produtoFinal: ProdutoFinal = {
+    name:                  '',
+    calories:              '',
+    protein_g:             '',
+    sodium_mg:             '',
+    potassium_mg:          '',
+    cholesterol_mg:        '',
+    carbohydrates_total_g: '',
+    fiber_g:               '',
+    sugar_g:               '',
+  }
+
+  produto: Produto = {
+    gtin:            '',
+    description:     '',
+    barcode_image:   ''
+  }
+
+  code: any
+
+  constructor( 
+    private service: RequisicaoService,
+    private toast: ToastrService,
+    private ref: ChangeDetectorRef
+    ) {
+
+  }
+
+  ngOnInit(): void {
+  }
+
+  findByName(): void {
+    this.service.findByName(this.produtoFinal.name).subscribe( {
+      next: (resposta) => {
+      this.produtoFinal = resposta[0];
+    },error: (error) => {
+      this.toast.error('Produto não encontrado')
+      },
+    });
+  }
 
   innerWidth: any = window.innerWidth;
   innerHeigth: any = window.innerHeight;
@@ -48,21 +95,6 @@ export class ScannerComponent implements OnInit {
       ]
     }
   };
-  constructor(private ref: ChangeDetectorRef,
-              private router: Router  ) { }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.innerWidth = window.innerWidth;
-    this.innerHeigth = window.innerHeight;
-  }
-
-  ngOnInit() {
-    this.innerWidth = window.innerWidth;
-    this.innerHeigth = window.innerHeight;
-    console.log(this.innerWidth + "\n" + this.innerHeigth);
-    this.startScanner();
-  }
 
   testChangeValues() {
     this.barcode = 'Code-barres bidon : 0123456789';
@@ -112,10 +144,10 @@ export class ScannerComponent implements OnInit {
   }
 
   private logCode(result) {
-    const code = result.codeResult.code;
+    this.code = result.codeResult.code;
    
-    if (this.barcode !== code) {
-      this.barcode = 'Code-barres EAN : ' + code;
+    if (this.barcode !== this.code) {
+      this.barcode = 'Code-barres EAN : ' + this.code;
       this.barcodeResult=result.codeResult;
       this.ref.detectChanges();
       console.log(this.barcode);
@@ -130,9 +162,20 @@ export class ScannerComponent implements OnInit {
       console.log("JSON.stringify(result)",JSON.stringify(result))
       // console.log("this.barcodeResult",this.barcodeResult.json())
       Quagga.stop();
-      this.router.navigate(['produto/' + code ]);
+      this.produto.gtin = this.code;
+      this.findByGtin();
+      console.log("cheguei aqui ", this.produto.gtin);
+      console.log("cheguei aqui ", this.produtoFinal.name);
     }
+  }
 
+  findByGtin(): void {
+    this.service.findByGtin(this.produto.gtin).subscribe(resposta =>{
+      this.produto = resposta;
+      this.produtoFinal.name = this.produto.description;
+      this.findByName();
+      console.log(this.produto.description);
+    })
   }
 
 }

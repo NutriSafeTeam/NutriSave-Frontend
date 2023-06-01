@@ -96,9 +96,25 @@ mat-button {
 
 .example-card {
     max-width: 400px;
-  }
+}
   
-  mat-card-image {
+mat-card-image {
     width: 50%;
     height: 50%
-  }
+}
+
+.user {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+    object-fit: cover;
+}
+
+.maxwidth{
+    width: 200px!important;
+    min-width: unset!important;
+    margin: 20px;
+    display: block;
+}
