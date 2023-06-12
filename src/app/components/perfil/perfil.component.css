@@ -94,8 +94,12 @@ mat-button {
     margin-left: 60px;
 }
 
-.example-card {
-    max-width: 400px;
+.example-label {
+    height: 750px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
   
 mat-card-image {
