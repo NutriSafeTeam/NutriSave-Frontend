@@ -5,13 +5,13 @@
             <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
         </mat-form-field>
     
-        <button mat-icon-button color="primary" (click)="findByName()"> <mat-icon>search</mat-icon> </button>
+        <button mat-fab color="primary" class="search_button" (click)="findByName()"> <mat-icon class="size_of_icon">search</mat-icon> </button>
+        <button mat-fab color="accent" class="scan_button" (click)="startScanner()"> <mat-icon class="size_of_icon">settings_overscan</mat-icon> </button>
+        <button mat-fab class="stop_button" *ngIf="!isDisabled" [disabled]="isDisabled" (click)="stopScanner()"> <mat-icon class="size_of_icon">close</mat-icon> </button>
     </div>
 
-    <button mat-icon-button color="primary" (click)="startScanner()"> escanear </button>
-
     <div class="input-group">
-        <div id="inputBarcode" style="position: static">
+        <div id="inputBarcode" style="position: static" *ngIf="!isDisabled">
             <div id="interactive" class="viewport"></div>
         </div>
     </div>

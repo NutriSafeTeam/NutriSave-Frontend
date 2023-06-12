@@ -60,6 +60,8 @@ export class BuscaComponent {
   innerWidth: any = window.innerWidth;
   innerHeigth: any = window.innerHeight;
 
+  isDisabled = true;
+
   barcode = '';
   barcodeResult;
   configQuagga = {
@@ -101,6 +103,7 @@ export class BuscaComponent {
   }
 
   startScanner() {
+    this.isDisabled = false;
     this.barcode = '';
     this.ref.detectChanges();
 
@@ -176,6 +179,12 @@ export class BuscaComponent {
       this.findByName();
       console.log(this.produto.description);
     })
+  }
+
+  stopScanner() {
+
+    Quagga.stop();
+    this.isDisabled = true;
   }
 
 }
