@@ -32,7 +32,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptorProvider } from './interceptor/auth.interceptor';
 import { UsuarioCreateComponent } from './components/usuario/usuario-create/usuario-create.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { BuscaComponent } from './components/busca/busca.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
