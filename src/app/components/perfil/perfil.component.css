@@ -23,7 +23,7 @@ mat-button {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
-  }
+}
 
 .card {
     all: unset;
@@ -97,7 +97,7 @@ mat-button {
 .example-card {
     max-width: 400px;
 }
-  
+
 mat-card-image {
     width: 50%;
     height: 50%
@@ -108,13 +108,29 @@ mat-card-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-  
+
     object-fit: cover;
 }
 
-.maxwidth{
-    width: 200px!important;
-    min-width: unset!important;
+.maxwidth {
+    width: 200px !important;
+    min-width: unset !important;
     margin: 20px;
     display: block;
+}
+
+.example-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.max {
+    width: 30%;
+    margin-bottom: 25px;
+    background-color: #74976E;
+    color: #fff;
 }

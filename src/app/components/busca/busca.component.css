@@ -7,7 +7,7 @@ mat-form-field{
     margin-left: 1.5rem;
 }
 
-.pesqusiar {
+.pesquisar {
     width: 100%;
 }
 
@@ -50,4 +50,31 @@ h1 {
     padding: 0px !important;
     height: 40px;
     line-height: 40px;
+}
+
+.search_button{
+    height: 55px;
+    width: 55px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.stop_button{
+    height: 55px;
+    width: 55px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: red;
+}
+
+.scan_button{
+    height: 55px;
+    width: 55px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.size_of_icon{
+    scale: 120%;
 }
