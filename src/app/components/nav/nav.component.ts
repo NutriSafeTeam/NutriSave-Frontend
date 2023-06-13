@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
+  isExpanded: boolean = false;
+  opened = false;
   constructor(
     private router: Router ){
   }
