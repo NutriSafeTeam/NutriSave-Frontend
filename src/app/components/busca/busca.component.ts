@@ -187,5 +187,4 @@ export class BuscaComponent {
     Quagga.stop();
     this.isDisabled = true;
   }
-
 }
