@@ -142,6 +142,11 @@ h3 {
 
 }
 
+.d-link {
+    text-decoration: none;
+    color:#000;
+}
+
 @media (min-width: 768px) {
     .wrapper {
         grid-template-columns: repeat(5, 1fr);
