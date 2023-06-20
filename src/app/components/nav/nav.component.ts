@@ -13,6 +13,11 @@ export class NavComponent implements OnInit {
     private router: Router ){
   }
 
+  logOut(): void{
+    localStorage.clear();
+    this.router.navigate(['login']);
+  }
+
   ngOnInit(): void {
     this.router.navigate(['home']);
   }

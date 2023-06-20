@@ -164,11 +164,12 @@ export class BuscaComponent {
       console.log("Result",result)
       console.log("JSON.stringify(result)",JSON.stringify(result))
       // console.log("this.barcodeResult",this.barcodeResult.json())
-      Quagga.stop();
+      
       this.produto.gtin = this.code;
       this.findByGtin();
       console.log("cheguei aqui ", this.produto.gtin);
       console.log("cheguei aqui ", this.produtoFinal.name);
+      this.stopScanner()
     }
   }
 

@@ -4,7 +4,7 @@ h4{
 
 mat-form-field{
     margin-top: 1.5rem;
-    margin-left: 1.5rem;
+    width: 50%;
 }
 
 .pesquisar {

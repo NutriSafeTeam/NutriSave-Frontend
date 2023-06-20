@@ -4,10 +4,13 @@
             <mat-label>Pesquisar</mat-label>
             <input matInput [(ngModel)]="produtoFinal.name" placeholder="Ex. ium">
         </mat-form-field>
-    
-        <button mat-fab color="primary" class="search_button" (click)="findByName()"> <mat-icon class="size_of_icon">search</mat-icon> </button>
-        <button mat-fab color="accent" class="scan_button" (click)="startScanner()"> <mat-icon class="size_of_icon">settings_overscan</mat-icon> </button>
-        <button mat-fab class="stop_button" *ngIf="!isDisabled" [disabled]="isDisabled" (click)="stopScanner()"> <mat-icon class="size_of_icon">close</mat-icon> </button>
+
+        <button mat-fab color="primary" class="search_button" (click)="findByName()"> <mat-icon
+                class="size_of_icon">search</mat-icon> </button>
+        <button mat-fab color="accent" class="scan_button" (click)="startScanner()"> <mat-icon
+                class="size_of_icon">settings_overscan</mat-icon> </button>
+        <button mat-fab class="stop_button" *ngIf="!isDisabled" [disabled]="isDisabled" (click)="stopScanner()">
+            <mat-icon class="size_of_icon">close</mat-icon> </button>
     </div>
 
     <div class="input-group">

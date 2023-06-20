@@ -10,10 +10,11 @@ import { BuscaComponent } from './components/busca/busca.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
+  { path: 'cadastro',          component: CadastroComponent }, 
+
   { 
     path: '', component: NavComponent, children: [
       { path: 'home',          component: HomeComponent },
-      { path: 'cadastro',          component: CadastroComponent }, 
       { path: 'perfil',    component: PerfilComponent },
       { path: 'busca',                 component: BuscaComponent},
     ] 
