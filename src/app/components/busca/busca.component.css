@@ -78,3 +78,10 @@ h1 {
 .size_of_icon{
     scale: 120%;
 }
+
+.mat-elevation-z8{
+    border: 2px solid;
+    border-color: #f4f4f4;
+    background-color: #fff;
+    box-shadow: none;
+}
